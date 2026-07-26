@@ -1,15 +1,15 @@
-// Generic track shape. Kept source-agnostic on purpose: whichever backend
-// we wire up next (Jamendo, Audius, SoundCloud, ...) just needs to map its
-// response into this shape, and every component below already knows how
-// to render it.
 export interface Track {
   id: string;
   title: string;
   artist: string;
   artwork: string;
   durationSec: number;
-  streamUrl: string;
-  source: 'jamendo' | 'audius' | 'soundcloud' | 'local';
+  source: 'jamendo' | 'soundcloud';
+  /** Jamendo only — direct audio file URL, playable in a plain <audio> tag. */
+  streamUrl?: string;
+  /** SoundCloud only — the track's page URL, played via the Widget API iframe
+   *  since SoundCloud doesn't expose raw stream URLs without full API access. */
+  soundcloudUrl?: string;
 }
 
 export interface Playlist {
