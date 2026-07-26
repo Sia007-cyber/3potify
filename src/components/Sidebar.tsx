@@ -9,7 +9,11 @@ export function Sidebar({ playlists }: SidebarProps) {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.brand}>
-        <span className={styles.brandMark}>◆</span>
+        <img
+          src="public/3potify.png"
+          alt="3potify"
+          className={styles.brandMark}
+        />
         <span className={styles.brandName}>3potify</span>
       </div>
 
