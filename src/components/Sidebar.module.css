@@ -30,12 +30,41 @@
 }
 
 .brandMark {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  flex-shrink: 0;
+  font-size: 1.15em;
+  font-weight: 800;
 
-  filter: drop-shadow(0 0 10px var(--accent-glow));
+  background: linear-gradient(
+    115deg,
+    var(--accent) 0%,
+    var(--accent) 42%,
+    #eafff6 50%,
+    var(--accent) 58%,
+    var(--accent) 100%
+  );
+  background-size: 300% auto;
+  background-position: 200% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+  animation: brandShine 5.5s ease-in-out infinite;
+}
+
+@keyframes brandShine {
+  0%, 55% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brandMark {
+    animation: none;
+    background-position: 40% 0;
+  }
 }
 
 /* Navigation */
