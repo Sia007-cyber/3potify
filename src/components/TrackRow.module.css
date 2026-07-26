@@ -1,0 +1,76 @@
+.row,
+.rowActive {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 28px 40px 1fr 48px;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: var(--text);
+}
+
+.row:hover {
+  background: var(--surface);
+}
+
+.rowActive {
+  background: var(--surface-hi);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+}
+
+.rowActive .index {
+  color: var(--accent);
+}
+
+.artwork {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowActive .title {
+  color: var(--accent);
+}
+
+.artist {
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.duration {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: right;
+}
