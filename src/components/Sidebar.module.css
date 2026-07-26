@@ -7,26 +7,38 @@
   min-height: 0;
 }
 
+/* Brand */
+
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 8px 22px;
-}
-
-.brandMark {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  flex-shrink: 0;
+  padding: 0 8px 24px;
 }
 
 .brandName {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--text);
+
+  user-select: none;
 }
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+
+  filter: drop-shadow(0 0 10px var(--accent-glow));
+}
+
+/* Navigation */
 
 .nav {
   display: flex;
@@ -37,10 +49,12 @@
 .navItem,
 .navItemActive {
   padding: 9px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-dim);
+
+  transition: 0.2s ease;
 }
 
 .navItem:hover {
@@ -50,7 +64,7 @@
 
 .navItemActive {
   color: var(--text);
-  background: var(--surface);
+  background: var(--surface-hi);
 }
 
 .divider {
@@ -59,11 +73,13 @@
   margin: 18px 8px;
 }
 
+/* Playlists */
+
 .playlistHeader {
   padding: 0 10px 8px;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-dim);
 }
@@ -71,15 +87,17 @@
 .playlists {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   overflow-y: auto;
 }
 
 .playlistItem {
   padding: 8px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   color: var(--text-dim);
+
+  transition: 0.2s ease;
 }
 
 .playlistItem:hover {

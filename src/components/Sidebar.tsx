@@ -9,8 +9,9 @@ export function Sidebar({ playlists }: SidebarProps) {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.brand}>
-        <img src="/3potify.png" alt="3potify" className={styles.brandMark} />
-        <span className={styles.brandName}>3potify</span>
+        <span className={styles.brandName}>
+          <span className={styles.brandMark}>3</span>potify
+        </span>
       </div>
 
       <nav className={styles.nav}>
@@ -28,6 +29,7 @@ export function Sidebar({ playlists }: SidebarProps) {
       <div className={styles.divider} />
 
       <div className={styles.playlistHeader}>Playlists</div>
+
       <div className={styles.playlists}>
         {playlists.map((p) => (
           <a href="#" key={p.id} className={styles.playlistItem}>
