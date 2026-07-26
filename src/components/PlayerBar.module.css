@@ -1,3 +1,4 @@
+/* src/components/PlayerBar.module.css */
 .bar {
   height: 84px;
   display: grid;
@@ -114,6 +115,7 @@
   background: var(--surface-hi);
   border-radius: 2px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .fill {
